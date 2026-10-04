@@ -1,0 +1,1 @@
+# BlindSpot AI app package
