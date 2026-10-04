@@ -224,7 +224,7 @@ blindspot-ai/
 │   │       ├── pii.py         Email/phone regex detection
 │   │       └── rate_limit.py  Sliding-window per-IP rate limiter
 │   └── tests/
-│       └── test_main.py      Full pytest suite (12 test classes, 40+ tests)
+│       └── test_main.py      Full pytest suite (12 test classes, 56 tests)
 ├── frontend/
 │   ├── index.html            Semantic HTML, ARIA, skip link, all sections
 │   ├── styles.css            WCAG AA, focus outlines, reduced-motion, responsive
@@ -246,7 +246,7 @@ blindspot-ai/
 | **Code Quality** | Type hints throughout; docstrings on all public functions; `ruff` config in `pyproject.toml`; small single-purpose functions; `schemas.py` / `services/` / `security/` separation; no dead code |
 | **Security** | API key never in frontend; Secret Manager path in `config.py`; CSP + security headers in `main.py`; input sanitisation in `security/validation.py`; PII detection in `security/pii.py`; rate limiting in `security/rate_limit.py`; prompt-injection defence in `prompts.py`; `textContent` only in `app.js`; no decision data logged or stored |
 | **Efficiency** | Exactly one Gemini call per unique analysis; LRU cache in `gemini_service.py`; bounded input/output (Pydantic field limits); one retry only; pure functions for scoring and receipt |
-| **Testing** | 40+ pytest tests in `backend/tests/test_main.py`; mock mode always on in tests; covers validation, PII, injection, schema, scoring, receipt, rate limiting, health, analyze endpoint, prompt building |
+| **Testing** | 56 pytest tests in `backend/tests/test_main.py`; mock mode always on in tests; covers validation, PII, injection, schema, scoring, receipt, rate limiting, health, analyze endpoint, prompt building |
 | **Accessibility** | Semantic HTML in `index.html` (header/main/section/h1-h3); skip-to-content link; `aria-live` for loading/errors/score; `fieldset`/`legend` for radio groups; WCAG AA contrast in `styles.css`; visible focus outlines; `prefers-reduced-motion`; no meaning by colour alone (icons + text on every status) |
 | **Problem Statement Alignment** | AI never recommends; user-owned Decision Log; Evidence-Based Assumption Ledger; Reasoning Completeness Score; Decision Receipt with mandatory disclaimer; three analysis modes; transparent reasoning chain per assumption |
 | **Google Services Usage** | Gemini API (structured output, Interactions API) — `gemini_service.py`; Cloud Run (Dockerfile + deploy commands above); Secret Manager (config.py + setup commands above); Cloud Logging (logging_setup.py) |
