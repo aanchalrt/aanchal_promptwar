@@ -21,3 +21,5 @@ python_classes = ["Test*"]
 python_functions = ["test_*"]
 asyncio_mode = "auto"
 pythonpath = ["."]
+   [tool.vercel]
+   entrypoint = "backend.app.main:app"
