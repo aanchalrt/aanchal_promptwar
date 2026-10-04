@@ -28,10 +28,10 @@ pythonpath = ["."]
    version = "0.1.0"
    requires-python = ">=3.11"
    dependencies = [
-     "fastapi",
-     "uvicorn",
-     "pydantic>=2",
-     "google-genai",
-     "google-cloud-logging",
-     "google-cloud-secret-manager",
+     "fastapi>=0.115.0,<1.0.0",
+     "uvicorn[standard]>=0.30.0,<1.0.0",
+     "pydantic>=2.7.0,<3.0.0",
+     "google-genai>=2.25.0",
+     "google-cloud-logging>=3.10.0",
+     "google-cloud-secret-manager>=2.20.0",
    ]
