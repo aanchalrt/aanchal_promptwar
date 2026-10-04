@@ -1,1 +1,0 @@
-# BlindSpot AI backend package
