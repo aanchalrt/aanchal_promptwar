@@ -4,6 +4,9 @@
 
 BlindSpot AI is a transparent decision-reasoning assistant that surfaces hidden assumptions, overlooked factors, trade-offs, and unknowns in a user's thinking — without ever recommending a course of action. The user owns their decision; the AI owns only the reflection.
 
+ **Live demo:** https://aanchal-promptwar.vercel.app
+   **Cloud deployment:** a production-ready Google Cloud setup (Cloud Run + Secret Manager + Cloud Logging) is included via the Dockerfile and the deployment commands below.
+
 ---
 
 ## The Problem
